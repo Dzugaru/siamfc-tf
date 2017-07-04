@@ -1,6 +1,6 @@
 
 import tensorflow as tf
-print('Using Tensorflow '+tf.__version__)
+print(('Using Tensorflow '+tf.__version__))
 import matplotlib.pyplot as plt
 import sys
 # sys.path.append('../')
