@@ -15,11 +15,11 @@ def parse_arguments(in_hp={}, in_evaluation={}, in_run={}):
     with open('parameters/design.json') as json_file:
         design = json.load(json_file)                
 
-    for name,value in in_hp.items():
+    for name,value in list(in_hp.items()):
         hp[name] = value
-    for name,value in in_evaluation.items():
+    for name,value in list(in_evaluation.items()):
         evaluation[name] = value
-    for name,value in in_run.items():
+    for name,value in list(in_run.items()):
         run[name] = value
     
     hp = namedtuple('hp', list(hp.keys()))(**hp)
